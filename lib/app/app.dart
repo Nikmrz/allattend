@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:allattend/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:allattend/ui/dialogs/info_alert/info_alert_dialog.dart';
 import 'package:allattend/ui/module/contact_directory/view/addcontact_view.dart';
