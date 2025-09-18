@@ -12,6 +12,7 @@ class AddcontactView extends StatelessWidget {
       builder: (context, viewmodel, child) {
         return Scaffold(
           appBar: AppBar(
+            notificationPredicate: (_) => false,
             title: Row(
               children: [
                 const Text(
@@ -19,9 +20,9 @@ class AddcontactView extends StatelessWidget {
                   style: TextStyle(
                     color: Color.fromARGB(99, 4, 65, 4),
                     fontSize: 16,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: 'san Francisco',
+                
+                    fontWeight: FontWeight.bold,
+                     fontFamily: 'MPLUS1P'
                   ),
                 ),
                 Spacer(),
@@ -52,7 +53,6 @@ class AddcontactView extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // Breadcrumb
                                 Padding(
                                   padding: const EdgeInsets.only(right: 14.0),
                                   child: Row(
@@ -62,36 +62,40 @@ class AddcontactView extends StatelessWidget {
                                       Text(
                                         'Dashboard',
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold
+                                            , fontFamily: 'MPLUS1P'),
                                       ),
                                       Icon(Icons.chevron_right,
                                           size: 20, color: Colors.black),
                                       Text(
                                         'Contact',
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold
+                                            , fontFamily: 'MPLUS1P'),
                                       ),
                                       Icon(Icons.chevron_right,
                                           size: 20, color: Colors.black),
                                       Text(
                                         'Add Contact',
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold
+                                            , fontFamily: 'MPLUS1P'),
                                       ),
                                     ],
                                   ),
                                 ),
-                                SizedBox(height: 40),
+                                SizedBox(height: 48),
                                 // Title
                                 Center(
                                   child: Text(
                                     'ADD CONTACT',
                                     style: TextStyle(
                                         fontSize: 32,
-                                        fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.w900
+                                        , fontFamily: 'MPLUS1P'),
                                   ),
                                 ),
                                 SizedBox(height: 10),
@@ -99,13 +103,14 @@ class AddcontactView extends StatelessWidget {
                                   child: Text(
                                     'Select a Profile Picture',
                                     style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w900,
+                                         fontFamily: 'MPLUS1P',
                                         color: Colors.grey),
                                   ),
                                 ),
-                                SizedBox(height: 20),
-                                // Profile picture
+                                SizedBox(height: 16),
+                             
                                 Center(
                                   child: CircleAvatar(
                                     radius: 60,
@@ -119,7 +124,6 @@ class AddcontactView extends StatelessWidget {
                                 ),
                                 SizedBox(height: 30),
 
-                                // Input fields
                                 _buildTextField('Full Name', Icons.person_2),
                                 _buildTextField('Mobile Number', Icons.call),
                                 _buildTextField('Email Address', Icons.email),
@@ -127,49 +131,55 @@ class AddcontactView extends StatelessWidget {
                                 _buildTextField('Affiliated School', Icons.school),
 
                                 SizedBox(height: 20),
+
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: ElevatedButton(
+                                        onPressed: (){}, child: Text('Cancel',style: TextStyle(fontFamily: 'MPLUS1P',color: const Color.fromARGB(255, 255, 255, 255)),), 
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.red,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(30)
+                                            ,),
+                                            ),
+                                            ),
+                                    ),
+                                    SizedBox(width: 20),
+                                    Expanded(
+                                      child: ElevatedButton(
+                                        onPressed: (){}, child: Text('Save',style: TextStyle(color: Colors.white, fontFamily: 'MPLUS1P'),), 
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: const Color.fromARGB(255, 14, 200, 7),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(30)
+                                            ,),
+                                            ),
+                                            ),
+                                    ),
+                                  ],
+
+                                ),
                               ],
+
+                              
                             ),
+
                           ),
+                          
                         ),
-                        // Buttons
-                        Row(
-                          children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                                child: Text("Cancel"),
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Expanded(
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.green,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                                child: Text("Save"),
-                              ),
-                            ),
-                          ],
-                        ),
+                      
+                      
                       ],
+                      
                     ),
+                    
                   ),
+                  
                 ),
+                
         );
+        
       },
     );
   }
@@ -188,6 +198,7 @@ class AddcontactView extends StatelessWidget {
           ),
           filled: true,
           fillColor: Color(0xFFEEEEEE),
+          hintStyle: TextStyle(fontFamily: 'MPLUS1P'),
         ),
       ),
     );

@@ -24,3 +24,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  assets:
+    - assets/font/
+
+  fonts:
+    - family: MPLUS1P   
+      fonts:
+        - asset: assets/font/MPLUS1P-Black.ttf
+        - asset: assets/font/MPLUS1P-Bold.ttf
+        - asset: assets/font/MPLUS1P-ExtraBold.ttf
+        - asset: assets/font/MPLUS1P-Light.ttf
+        - asset: assets/font/MPLUS1P-Medium.ttf
+        - asset: assets/font/MPLUS1P-Regular.ttf
+        - asset: assets/font/MPLUS1P-Thin.ttf
+

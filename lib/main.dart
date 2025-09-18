@@ -1,3 +1,4 @@
+import 'package:allattend/ui/module/contact_directory/view/clone_view.dart';
 import 'package:flutter/material.dart';
 import 'package:allattend/app/app.bottomsheets.dart';
 import 'package:allattend/app/app.dialogs.dart';
@@ -20,7 +21,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.addcontactView,
+      initialRoute: Routes.pacView,
       onGenerateRoute: StackedRouter().onGenerateRoute,
       navigatorKey: StackedService.navigatorKey,
       navigatorObservers: [StackedService.routeObserver],
