@@ -1,4 +1,3 @@
-import 'package:allattend/ui/module/contact_directory/view/clone_view.dart';
 import 'package:flutter/material.dart';
 import 'package:allattend/app/app.bottomsheets.dart';
 import 'package:allattend/app/app.dialogs.dart';
